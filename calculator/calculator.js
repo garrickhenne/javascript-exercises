@@ -1,24 +1,32 @@
-function add () {
-	
+function add (a,b) {
+  return a + b;
 }
 
-function subtract () {
-	
+function subtract (a,b) {
+  return a - b;
 }
 
-function sum () {
-	
+function sum (things) {
+	return things.reduce((acc,sumSoFar) => acc+sumSoFar,0);
 }
 
-function multiply () {
-	
+function multiply (things) {
+	return things.reduce((acc,soFar) => acc * soFar);
 }
 
-function power() {
-	
+function power(a, b) {
+  let rtn = a;
+  for (let i = 1; i < b; i++) {
+    rtn *= a;
+  }
+  return rtn;
 }
 
-function factorial() {
+function factorial(a) {
+  if (a === 0) {
+    return 1;
+  }
+  return a * factorial(a-1);
 	
 }
 
